@@ -5,7 +5,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 # Credenciales y archivos
-credentials_sheet_drive = "geminiapi-470823-262f80dddb02.json"
+credentials_sheet_drive = "credentials.json"
 SPREADSHEET_ID = "1ZWqpLUSZ0QuHAJf4vb48JCP-kYSlXGz7BqMybk7KHgI"
 
 # Alcances necesarios para Google Sheets y Drive
