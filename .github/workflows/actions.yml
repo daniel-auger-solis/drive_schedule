@@ -29,7 +29,7 @@ jobs:
       # 4️⃣ Crear archivo de credenciales a partir de un secret
       - name: Set up Google credentials
         run: |
-          echo "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > credentials.json
+          printf '%s' "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > credentials.json
 
       # 5️⃣ Ejecutar el script
       - name: Run main.py
