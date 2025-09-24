@@ -61,3 +61,24 @@ on:
   schedule:
     - cron: '*/30 * * * *' # cada 30 minutos
   workflow_dispatch: # permite ejecutarlo manualmente
+```
+
+---
+
+### 🔐 Uso de un JSON secreto
+
+Si tu workflow requiere un JSON de credenciales (como para Google API), recuerda:  
+
+1. Debes **convertir el JSON a base64** y subirlo como un secret en GitHub.  
+   - Una forma de hacerlo desde la terminal de Windows PowerShell y copiarlo automáticamente al portapapeles:  
+     ```powershell
+     [Convert]::ToBase64String([IO.File]::ReadAllBytes("geminiapi-470823-262f80dddb02.json")) | clip
+     ```
+   - Luego, pega el contenido del portapapeles en un nuevo secret de GitHub, por ejemplo: `GOOGLE_CREDENTIALS_JSON_BASE64`.
+
+2. En tu `actions.yml`, decodifica el base64 a un `.json` para usarlo en tu script:  
+   ```yaml
+   - name: Set up Google credentials
+     run: |
+       echo "${{ secrets.GOOGLE_CREDENTIALS_JSON_BASE64 }}" | base64 --decode > credentials.json
+   ```
