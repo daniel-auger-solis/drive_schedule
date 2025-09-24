@@ -16,8 +16,7 @@ Para un **schedule mucho más preciso y fiable**, es recomendable usar [cron-job
        ```
        https://api.github.com/repos/daniel-auger-solis/drive_schedule/actions/workflows/actions.yml/dispatches
        ```
-     - **Execution Schedule**: define cada cuánto tiempo quieres que se ejecute (ej: cada 30 minutos).  
-   - En la pestaña **Advanced** puedes dejar las opciones por defecto.
+     - **Execution Schedule**: define cada cuánto tiempo quieres que se ejecute (ej: cada 30 minutos).
 
 2. **Configurar los Headers**  
    Agrega los siguientes encabezados (Key → Value):  
