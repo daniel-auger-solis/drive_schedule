@@ -50,4 +50,14 @@ Para confirmar que todo funciona:
 2. Entra a la pestaña **Actions**.  
 3. Verás una nueva ejecución de tu workflow justo en el horario definido en cron-job.org.  
 
-Si aparece ahí, ¡todo está funcionando correctamente! 🎉
+---
+
+### 🔄 Volver a usar GitHub Actions
+
+Si en algún momento quieres volver a usar el schedule interno de GitHub Actions, simplemente cambia la sección `on:` de tu `actions.yml` a:
+
+```yaml
+on:
+  schedule:
+    - cron: '*/30 * * * *' # cada 30 minutos
+  workflow_dispatch: # permite ejecutarlo manualmente
