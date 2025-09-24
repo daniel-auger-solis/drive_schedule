@@ -1,6 +1,3 @@
-## Ejecutar código
-Abrir el siguiente enlace para ejecutar el código: https://drive-schedule-web.onrender.com/
-
 ## 🚀 Ejecución programada del workflow
 
 GitHub Actions permite usar `schedule` con sintaxis de cron para ejecutar automáticamente workflows.  
